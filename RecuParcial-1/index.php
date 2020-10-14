@@ -217,6 +217,59 @@ switch ($path) {
         }
         break;
 
+    case '/stats':
+        switch ($method) {
+            case 'POST':
+                echo 'Método incorrecto!'.$path;
+                break;
+            case 'GET':
+                try {
+                    $jwt = FuncionesAux::getServer("HTTP_TOKEN");
+
+                    $decoded = Token::decodeJWT($jwt);
+
+                } catch (\Throwable $th){
+                    echo "Error";
+                }
+
+                if (isset($decoded)) {
+                    
+                    $listaUsuarios = Archivo::leerObjJSON('userJson.txt');
+
+                    if (isset($listaUsuarios)) {
+                        foreach ($listaUsuarios as $usuario) {
+                            if ($usuario->mail == $decoded->mail) {
+                                $tUser = $usuario->tipoUsuario;
+                            }
+                        }
+                    }
+
+                    if ($tUser == 'admin') {
+                        $tipoServicio = FuncionesAux::getGet('tipoServicio');
+
+                        $listatiposServicio = Archivo::leerObjJSON('tiposServicio.txt');
+    
+                        if (isset($listatiposServicio)) {
+                            foreach ($listatiposServicio as $tipServ) {
+                                if ($tipServ->tipo == $tipoServicio) {
+                                    echo 'Nombre: '.$tipServ->nombre.'ID: '.$tipServ->id.'Precio: '.$tipServ->precio.'Demora: '.$tipServ->demora;
+                                    echo '<br>';
+                                }
+                            }
+                        }  
+                    }
+                    else {
+                        echo 'El usuario no es de tipo user';
+                    }                   
+
+
+                }
+            break;
+            default:
+                echo 'Método incorrecto!'.$path;
+                break;
+        }
+        break;
 
     default:
         # code...

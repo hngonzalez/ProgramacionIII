@@ -298,7 +298,7 @@
 					{
 						"key": "token",
 						"type": "text",
-						"value": "{{token}}"
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJ0aXBvVXN1YXJpbyI6ImFkbWluIiwiY2xhdmUiOjEyM30.LjfWdm04IPuF0O2UIkEMNtiyutUFNGJdgrF5J_N6U58"
 					}
 				],
 				"body": {
@@ -312,9 +312,22 @@
 					]
 				},
 				"url": {
-					"raw": "{{url}}users",
+					"raw": "http://localhost/Parciales/RecuParcial-1/index.php/stats?tipoServicio=20000",
+					"protocol": "http",
 					"host": [
-						"{{url}}users"
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "tipoServicio",
+							"value": "20000"
+						}
 					]
 				}
 			},
