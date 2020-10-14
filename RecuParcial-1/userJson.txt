@@ -1,0 +1,1 @@
+[{"tipoUsuario":"admin","mail":"admin@mail.com","clave":"123","foto":"img\/algoasi_9096.jpg"},{"tipoUsuario":"user","mail":"user@mail.com","clave":"321","foto":"img\/algoasi_4946.jpg"}]

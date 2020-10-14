@@ -1,0 +1,1 @@
+[{"marca":"honda","modelo":"1A25","patente":"aaa123","precio":"2500000"},{"marca":"ford","modelo":"2A45","patente":"aaa124","precio":"450000"}]

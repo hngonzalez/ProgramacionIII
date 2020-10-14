@@ -1,0 +1,1 @@
+[{"nombre":"Limpieza","id":"30","tipo":"20000","precio":"26588","demora":"2"},{"nombre":"Limpieza","id":"5","tipo":"50000","precio":"1222","demora":"4"}]

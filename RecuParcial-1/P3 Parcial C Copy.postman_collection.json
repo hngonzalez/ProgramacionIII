@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "c1f6eec5-db56-453a-bb30-2f204ed8bad3",
+		"name": "P3 Parcial C Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Punto 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "321",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/Nahue/Desktop/algoasi.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Parciales\\RecuParcial-1/index.php/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Parciales\\RecuParcial-1/index.php/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJ0aXBvVXN1YXJpbyI6ImFkbWluIiwiY2xhdmUiOjEyM30.LjfWdm04IPuF0O2UIkEMNtiyutUFNGJdgrF5J_N6U58"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patente",
+							"value": "aaa124",
+							"type": "text"
+						},
+						{
+							"key": "marca",
+							"value": "ford",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "2A45",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "450000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Parciales\\RecuParcial-1/index.php/vehiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}retiro/aaa123",
+					"host": [
+						"{{url}}retiro"
+					],
+					"path": [
+						"aaa123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJ0aXBvVXN1YXJpbyI6ImFkbWluIiwiY2xhdmUiOjEyM30.LjfWdm04IPuF0O2UIkEMNtiyutUFNGJdgrF5J_N6U58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "50000",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1222",
+							"type": "text"
+						},
+						{
+							"key": "demora",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Limpieza",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Parciales/RecuParcial-1/index.php/servicio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"servicio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJ0aXBvVXN1YXJpbyI6ImFkbWluIiwiY2xhdmUiOjEyM30.LjfWdm04IPuF0O2UIkEMNtiyutUFNGJdgrF5J_N6U58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patente",
+							"value": "aaa123",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "10/10/1990",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Parciales/RecuParcial-1/index.php/turno?=&=&=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Parciales",
+						"RecuParcial-1",
+						"index.php",
+						"turno"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Punto 7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}users",
+					"host": [
+						"{{url}}users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

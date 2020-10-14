@@ -52,7 +52,8 @@ switch ($path) {
                 $userAccede = false;
                 try {
                     $jwt = FuncionesAux::getServer("HTTP_TOKEN");
-
+                    echo $jwt;
+                    die();
                     $decoded = Token::decodeJWT($jwt);
 
                 } catch (\Throwable $th){
